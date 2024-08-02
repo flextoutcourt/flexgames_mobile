@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "light",
     "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/images/splash.png",
@@ -18,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#0f172a"
       }
     },
     "web": {
@@ -29,8 +29,24 @@
     "plugins": [
       "expo-router"
     ],
+    "expo":{
+      "androidStatusBar": {
+        "backgroundColor": "#0f172a",
+        "translucent": true,
+        "style": "light"
+      }
+    },
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "cea13366-1114-4ec3-bcea-c6bffca63139"
+      }
+    },
+    "owner": "flextoutcourt"
   }
 }
