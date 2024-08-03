@@ -1,8 +1,8 @@
 import { Link, useRouter } from "expo-router";
-import { Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
+import { BackHandler, Dimensions, Image, Pressable, ScrollView, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from "react-native";
 import {LinearGradient} from "expo-linear-gradient"
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import Carousel from "react-native-reanimated-carousel";
+import { useEffect } from "react";
 
 export default function Index() {
 
@@ -26,6 +26,22 @@ export default function Index() {
               <Image src="https://picsum.photos/80" style={[StyleSheet.absoluteFill, {borderRadius: 16}]} />
             </View>
             <Text style={{color: "black", fontSize: 24, textTransform: "uppercase"}}>Je n'ai jamais</Text>
+          </>
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} onPress={() => router.push('/games/rapgame')} style={{backgroundColor: "white", padding: 5, borderRadius: 16, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap:10}}>
+          <>
+            <View style={{width: 100, height: 100}}>
+              <Image src="https://picsum.photos/80" style={[StyleSheet.absoluteFill, {borderRadius: 16}]} />
+            </View>
+            <Text style={{color: "black", fontSize: 24, textTransform: "uppercase"}}>Rap jeu</Text>
+          </>
+        </TouchableOpacity>
+        <TouchableOpacity activeOpacity={0.8} onPress={() => router.push('/settings')} style={{backgroundColor: "white", padding: 5, borderRadius: 16, flexDirection: "row", alignItems: "center", justifyContent: "flex-start", gap:10}}>
+          <>
+            <View style={{width: 100, height: 100}}>
+              <Image src="https://picsum.photos/80" style={[StyleSheet.absoluteFill, {borderRadius: 16}]} />
+            </View>
+            <Text style={{color: "black", fontSize: 24, textTransform: "uppercase"}}>FDP FDP FDP</Text>
           </>
         </TouchableOpacity>
       </ScrollView>
