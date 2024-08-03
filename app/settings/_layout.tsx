@@ -9,7 +9,7 @@ export default function JeNaiJamaisLayout(){
 
     return (
         <SafeAreaProvider style={{backgroundColor: "#111827"}}>
-            <Header title={"Je n'ai jamais"} leftIcon="home" rightIcon="cog" leftAction={() => router.navigate('')} rightAction={() => router.push('settings')} />
+            <Header title={"Settings"} leftIcon="arrow-back-outline" rightIcon="cog" leftAction={() => router.back()} rightAction={() => router.navigate('/settings')} />
             <Slot />
         </SafeAreaProvider>
     )
